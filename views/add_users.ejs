@@ -1,0 +1,38 @@
+<%- include("layout/header") %>
+<div class="container">
+   <div class="row">
+  <div class="col-1g-12">
+    <form action="/add" method="post" id="add-form" enctype="multipart/form-data"> 
+        <h1>Add New User</h1>
+        <div class="mb-3">
+          <label for="name">Name</label>
+          <input type="text" name="name" class="form-control form-control-lg"   placeholder="Enter Name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control form-control-lg"  placeholder="Enter Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" class="form-control form-control-lg"   placeholder="Enter Phone Number" required>
+          </div>
+        <div class="mb-3">
+            <label for="password">Password</label>
+          <input type="password" name="password" class="form-control form-control-lg"  placeholder="Enter Password" required>
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <div>
+            <label for="image"class="form-label">Select Image</label>
+            <input  name="filename" class="form-control form-control-lg"  type="file" name="image" required>
+         </div>
+         <div class="mb-3 d-grid">
+          <button type="submit" name="submit"  value="Add User" class="btn btn-primary">Add User</button>
+         </div>
+      </form>
+  </div>
+   </div>
+</div>
+<%- include("layout/footer") %>
